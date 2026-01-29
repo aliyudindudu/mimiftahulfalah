@@ -1,0 +1,209 @@
+/* =============================================
+   HEADMASTER SECTION STYLES
+   ============================================= */
+
+.headmaster {
+    position: relative;
+    background-color: #ffffff;
+    padding: 4rem 1.5rem;
+    overflow: hidden;
+}
+
+/* Decorative elements */
+.headmaster-decor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    opacity: 0.15;
+}
+
+.headmaster-decor-left {
+    top: -50px;
+    left: -50px;
+}
+
+.headmaster-decor-right {
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+}
+
+.headmaster-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .headmaster-container {
+        grid-template-columns: auto 1fr;
+        gap: 4rem;
+    }
+}
+
+/* Photo */
+.headmaster-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.headmaster-photo {
+    width: 350px !important;
+    max-width: none !important;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.2));
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.headmaster-photo:hover {
+    transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+    .headmaster-photo-wrapper {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .headmaster-photo {
+        width: 450px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .headmaster-photo-wrapper {
+        justify-content: flex-start;
+        margin-left: -3rem;
+        margin-right: 0;
+    }
+
+    .headmaster-photo {
+        width: 550px !important;
+    }
+}
+
+/* Content */
+.headmaster-content {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .headmaster-content {
+        text-align: left;
+    }
+}
+
+.headmaster-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #14532d;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .headmaster-title {
+        font-size: 2rem;
+    }
+}
+
+.headmaster-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+/* Message Box */
+.headmaster-message-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    border-radius: 0 1rem 1rem 0;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.headmaster-greeting {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: #166534;
+    margin-bottom: 0.75rem;
+}
+
+.headmaster-message-text {
+    font-size: 0.9375rem;
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    text-align: justify;
+}
+
+.headmaster-message-text:last-of-type {
+    margin-bottom: 0.75rem;
+}
+
+.headmaster-closing {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: #166534;
+    text-align: right;
+}
+
+/* Buttons */
+.headmaster-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .headmaster-buttons {
+        justify-content: flex-start;
+    }
+}
+
+.headmaster-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+.headmaster-btn-primary {
+    background-color: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.headmaster-btn-primary:hover {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.headmaster-btn-secondary {
+    background-color: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.headmaster-btn-secondary:hover {
+    background-color: #16a34a;
+    color: #ffffff;
+}

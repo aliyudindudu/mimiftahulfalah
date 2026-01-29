@@ -1,8 +1,20 @@
 @import "tailwindcss";
+@import "../styles/navbar.css";
+@import "../styles/hero.css";
+@import "../styles/headmaster.css";
+@import "../styles/news.css";
+@import "../styles/about.css";
+@import "../styles/animations.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #1a5f2a;
+  --primary-light: #f0fdf4;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
 }
 
 @theme inline {
@@ -12,15 +24,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,0 +1,209 @@
+/* =============================================
+   ABOUT SECTION STYLES
+   ============================================= */
+
+.about-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+/* Section Header */
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
+}
+
+.about-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+}
+
+.about-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* History Section - Full width */
+.about-history-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .about-history-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+}
+
+/* History Content - Left side */
+.about-history-content {
+    order: 2;
+    padding: 0 1rem;
+    max-width: 600px;
+    text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .about-history-content {
+        order: 1;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        max-width: 550px;
+    }
+}
+
+.about-history-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.about-history-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #16a34a;
+    border-radius: 2px;
+}
+
+.about-history-text {
+    font-size: 0.9375rem;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.about-history-text p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.about-history-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* History Image - Right side, flush to edge */
+.about-history-image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .about-history-image {
+        order: 2;
+        justify-content: flex-end;
+    }
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .about-photo {
+        width: 100%;
+        max-width: none;
+        height: 450px;
+        object-fit: cover;
+    }
+}
+
+/* =============================================
+   SCROLL ANIMATIONS - Only on tablet/desktop
+   ============================================= */
+
+/* Hidden state */
+.animate-hidden {
+    opacity: 0;
+}
+
+/* Fade in from top */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Slide from left */
+.animate-slide-left {
+    animation: slideFromLeft 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Slide from right */
+.animate-slide-right {
+    animation: slideFromRight 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Disable animations on mobile */
+@media (max-width: 767px) {
+
+    .animate-hidden,
+    .animate-fade-in,
+    .animate-slide-left,
+    .animate-slide-right {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}

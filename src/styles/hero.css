@@ -1,0 +1,235 @@
+/* =============================================
+   HERO SECTION STYLES
+   ============================================= */
+
+.hero {
+    background-color: #E8F5E9;
+    padding: 3rem 1.5rem;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* Hero Content (Left Side) */
+.hero-content {
+    order: 2;
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        order: 1;
+    }
+}
+
+.hero-subtitle {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #16a34a;
+    background-color: #DBFCE7;
+    padding: 0.375rem 0.875rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #14532d;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 2.75rem;
+    }
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.hero-btn-primary {
+    background-color: #16a34a;
+    color: #ffffff;
+    border: 2px solid #16a34a;
+}
+
+.hero-btn-primary:hover {
+    background-color: #15803d;
+    border-color: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.hero-btn-secondary {
+    background-color: transparent;
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.hero-btn-secondary:hover {
+    background-color: #16a34a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Images (Right Side) - Stacked/Overlapping */
+.hero-images {
+    position: relative;
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+}
+
+@media (min-width: 1024px) {
+    .hero-images {
+        order: 2;
+        min-height: 450px;
+    }
+}
+
+.hero-image-wrapper {
+    position: absolute;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    padding: 0.5rem;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    width: 85%;
+    max-width: 400px;
+    /* 16:9 aspect ratio */
+    aspect-ratio: 16 / 9;
+}
+
+.hero-image-wrapper:hover {
+    transform: scale(1.08) rotate(0deg) !important;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    z-index: 20 !important;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+/* Main Image - Front (default) */
+.hero-image-main {
+    z-index: 2;
+    transform: rotate(4deg) translateY(-15px);
+}
+
+.hero-image-main.swapped {
+    z-index: 1;
+    transform: rotate(-4deg) translateY(15px);
+}
+
+/* Secondary Image - Back (default) */
+.hero-image-secondary {
+    z-index: 1;
+    transform: rotate(-4deg) translateY(15px);
+    display: block;
+}
+
+.hero-image-secondary.swapped {
+    z-index: 2;
+    transform: rotate(4deg) translateY(-15px);
+}
+
+@media (min-width: 768px) {
+    .hero-image-wrapper {
+        max-width: 420px;
+    }
+
+    .hero-image-main {
+        transform: rotate(5deg) translateY(-20px);
+    }
+
+    .hero-image-main.swapped {
+        transform: rotate(-5deg) translateY(20px);
+    }
+
+    .hero-image-secondary {
+        transform: rotate(-5deg) translateY(20px);
+    }
+
+    .hero-image-secondary.swapped {
+        transform: rotate(5deg) translateY(-20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-image-wrapper {
+        max-width: 460px;
+    }
+
+    .hero-image-main {
+        transform: rotate(6deg) translateY(-25px) translateX(10px);
+    }
+
+    .hero-image-main.swapped {
+        transform: rotate(-6deg) translateY(25px) translateX(-10px);
+    }
+
+    .hero-image-secondary {
+        transform: rotate(-6deg) translateY(25px) translateX(-10px);
+    }
+
+    .hero-image-secondary.swapped {
+        transform: rotate(6deg) translateY(-25px) translateX(10px);
+    }
+}
