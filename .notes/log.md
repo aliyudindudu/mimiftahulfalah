@@ -19,3 +19,7 @@ This folder contains development notes and logs.
 ### Session 4
 - Bug fixes
 - Layout adjustments
+
+### Session 5
+- Final testing
+- Documentation updates
