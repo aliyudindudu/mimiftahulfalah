@@ -15,3 +15,7 @@ This folder contains development notes and logs.
 ### Session 3
 - Component refactoring
 - CSS improvements
+
+### Session 4
+- Bug fixes
+- Layout adjustments
