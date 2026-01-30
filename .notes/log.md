@@ -11,3 +11,7 @@ This folder contains development notes and logs.
 ### Session 2
 - Reviewing code structure
 - Optimizing performance
+
+### Session 3
+- Component refactoring
+- CSS improvements
