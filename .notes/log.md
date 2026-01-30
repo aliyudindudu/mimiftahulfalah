@@ -7,3 +7,7 @@ This folder contains development notes and logs.
 ### Session 1
 - Working on website improvements
 - Testing components
+
+### Session 2
+- Reviewing code structure
+- Optimizing performance
