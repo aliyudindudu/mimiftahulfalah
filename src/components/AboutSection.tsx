@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import VisiMisiSection from './VisiMisiSection';
 
 // Interface untuk Section header
 interface AboutHeaderData {
@@ -63,7 +64,7 @@ export default function AboutSection({
                 <p className="about-description">{header.description}</p>
             </div>
 
-            {/* Sejarah Singkat Sekolah - Full width layout */}
+            {/* Part 1: Sejarah Singkat Sekolah */}
             <div className="about-history-wrapper">
                 <div
                     ref={contentRef}
@@ -77,7 +78,6 @@ export default function AboutSection({
                     </div>
                 </div>
 
-                {/* Single Photo - Flush to right edge */}
                 <div
                     ref={imageRef}
                     className={`about-history-image scroll-hidden scroll-fade-right ${imageVisible ? 'scroll-visible' : ''}`}
@@ -92,6 +92,9 @@ export default function AboutSection({
                     />
                 </div>
             </div>
+
+            {/* Part 2: Visi & Misi */}
+            <VisiMisiSection />
         </section>
     );
 }
