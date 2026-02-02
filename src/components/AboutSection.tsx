@@ -3,14 +3,15 @@
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import VisiMisiSection from './VisiMisiSection';
+import StatsSection from './StatsSection';
 
-// Interface untuk Section header
+
 interface AboutHeaderData {
     title: string;
     description: string;
 }
 
-// Interface untuk subsection
+
 interface AboutSubsectionData {
     id: string;
     sectionKey: string;
@@ -20,13 +21,13 @@ interface AboutSubsectionData {
     imageAlt: string;
 }
 
-// Default header data
+
 const defaultHeader: AboutHeaderData = {
     title: 'Tentang MI Miftahul Falah',
     description: 'Temukan informasi terkini seputar kegiatan, prestasi, dan update terbaru sekolah kami.',
 };
 
-// Default subsection data - Sejarah Singkat
+
 const defaultHistory: AboutSubsectionData = {
     id: '1',
     sectionKey: 'history',
@@ -64,7 +65,7 @@ export default function AboutSection({
                 <p className="about-description">{header.description}</p>
             </div>
 
-            {/* Part 1: Sejarah Singkat Sekolah */}
+            {/* Part 1: Sejarah Singkat */}
             <div className="about-history-wrapper">
                 <div
                     ref={contentRef}
@@ -95,6 +96,9 @@ export default function AboutSection({
 
             {/* Part 2: Visi & Misi */}
             <VisiMisiSection />
+
+            {/* Part 3: Stats */}
+            <StatsSection />
         </section>
     );
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-// Data interface untuk Headmaster Section (nanti diambil dari database)
+
 interface HeadmasterData {
     title: string;
     name: string;
