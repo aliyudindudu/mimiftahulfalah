@@ -131,9 +131,10 @@ const styles = {
 
 interface StatsSectionProps {
     data?: StatsData;
+    showCta?: boolean;
 }
 
-export default function StatsSection({ data = defaultStatsData }: StatsSectionProps) {
+export default function StatsSection({ data = defaultStatsData, showCta = true }: StatsSectionProps) {
     const [sectionRef, sectionVisible] = useScrollAnimation<HTMLDivElement>();
 
     if (!data.showOnHomepage) {
@@ -165,14 +166,16 @@ export default function StatsSection({ data = defaultStatsData }: StatsSectionPr
                 </div>
 
                 {/* CTA Button */}
-                <div style={styles.ctaWrapper}>
-                    <Link href={data.ctaLink} style={styles.ctaButton}>
-                        {data.ctaText}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
-                </div>
+                {showCta && (
+                    <div style={styles.ctaWrapper}>
+                        <Link href={data.ctaLink} style={styles.ctaButton}>
+                            {data.ctaText}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </Link>
+                    </div>
+                )}
             </div>
         </div>
     );
