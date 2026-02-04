@@ -26,7 +26,7 @@ const defaultStatsData: StatsData = {
         { id: '3', icon: 'teachers', value: '10', label: 'Guru Profesional' },
         { id: '4', icon: 'founded', value: '1970', label: 'Tahun Berdiri' },
     ],
-    ctaText: 'Selengkapnya nanti lanjut belum selesai capek ah udah dulu',
+    ctaText: 'Selengkapnya',
     ctaLink: '/profil',
     showOnHomepage: true,
 };
