@@ -54,7 +54,7 @@ const styles = {
         gap: '2rem',
     },
     visiCard: {
-        background: 'linear-gradient(135deg, #86efac 0%, #4ade80 100%)',
+        background: 'linear-gradient(135deg, #86efac 0%, #8dfd60ff 100%)',
         borderRadius: '1rem',
         padding: '2rem 1.5rem',
         position: 'relative' as const,
@@ -64,7 +64,7 @@ const styles = {
         transition: 'transform 0.3s ease',
     },
     misiCard: {
-        background: 'linear-gradient(135deg, #fef08a 0%, #fde047 100%)',
+        background: 'linear-gradient(135deg, #86efac 0%, #8dfd60ff 100%)',
         borderRadius: '1rem',
         padding: '2rem 1.5rem',
         position: 'relative' as const,
@@ -76,13 +76,13 @@ const styles = {
     visiTitle: {
         fontSize: '1.5rem',
         fontWeight: 700,
-        color: '#166534',
+        color: '#104929ff',
         marginBottom: '1rem',
     },
     misiTitle: {
         fontSize: '1.5rem',
         fontWeight: 700,
-        color: '#92400e',
+        color: '#104929ff',
         marginBottom: '1rem',
     },
     visiContent: {
@@ -116,7 +116,7 @@ export default function VisiMisiSection({ data = defaultVisiMisiData }: VisiMisi
     const [visiRef, visiVisible] = useScrollAnimation<HTMLDivElement>();
     const [misiRef, misiVisible] = useScrollAnimation<HTMLDivElement>();
 
-    // Jika kedua card tidak tampil, return null
+    // haloooooooo i was here
     if (!data.visi.showOnHomepage && !data.misi.showOnHomepage) {
         return null;
     }
