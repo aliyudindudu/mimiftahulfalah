@@ -4,6 +4,8 @@ import NewsSection from "@/components/NewsSection";
 import AboutSection from "@/components/AboutSection";
 import PrestasiSection from "@/components/PrestasiSection";
 import FasilitasSection from "@/components/FasilitasSection";
+import GallerySection from "@/components/GallerySection";
+import ContactSection from "@/components/ContactSection";
 
 
 export default function Home() {
@@ -15,6 +17,9 @@ export default function Home() {
       <AboutSection />
       <PrestasiSection />
       <FasilitasSection />
+      <GallerySection />
+      <ContactSection />
+
     </>
   );
 }
